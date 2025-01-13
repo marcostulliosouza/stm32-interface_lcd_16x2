@@ -2,7 +2,7 @@
 
 Este é um projeto simples que utiliza o microcontrolador STM32F103C8T6 para controlar um display LCD 16x2 em modo de comunicação de 4 bits. O objetivo do projeto é demonstrar a integração do hardware (STM32 e LCD) com o software, usando o STM32CubeIDE para programar o microcontrolador.
 
-### Funcionalidades Implementadas
+## Funcionalidades Implementadas
 
 - Inicialização do LCD.
 - Configuração do cursor em diferentes posições.
@@ -35,8 +35,11 @@ D7 - PC14
 O LCD é controlado através de quatro pinos de dados e dois pinos de controle. A interface com o LCD é feita utilizando um protocolo de comunicação de 4 bits. A aplicação básica inclui:
 
 1 - Inicialização do LCD.
+
 2 - Envio de comandos para o LCD.
+
 3 - Envio de dados (texto) para o LCD.
+
 4 - Configuração do cursor e escrita no display.
 
 ## Passos para Configuração
