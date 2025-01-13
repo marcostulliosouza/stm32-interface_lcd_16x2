@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include "lcd.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -86,6 +86,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  LCD_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -94,6 +95,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  // Exibe uma mensagem na tela
+	  LCD_SetCursor(0, 0); // Linha0, coluna 0
+	  LCD_Print("STM32 LCD");
+
+	  HAL_Delay(1);
+
+	  LCD_SetCursor(1, 0);
+	  LCD_Print("Olá todo mundo!");
+
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
