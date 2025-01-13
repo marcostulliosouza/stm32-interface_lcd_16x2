@@ -13,7 +13,7 @@
 void LCD_EnablePulse(void){
 	HAL_GPIO_WritePin(EN_GPIO_Port, EN_Pin, GPIO_PIN_SET); //EN = 1
 	HAL_Delay(1);
-	HAL_GIO_WritePin(EN_GPIO_Port, EN_Pin, GPIO_PIN_RESET); // EN = 0
+	HAL_GPIO_WritePin(EN_GPIO_Port, EN_Pin, GPIO_PIN_RESET); // EN = 0
 	HAL_Delay(1);
 }
 
@@ -32,7 +32,7 @@ void LCD_SendCommand(uint8_t cmd){
 	HAL_GPIO_WritePin(RS_GPIO_Port, RS_Pin, GPIO_PIN_RESET);
 
 	LCD_Send4Bits(cmd >> 4); // Envia o nibble alto
-	LCD_SendBits(cmd); // Envia o nibble baixo
+	LCD_Send4Bits(cmd); // Envia o nibble baixo
 }
 
 /*Essa Função define o RS como 1 (modo dados) e envia o dado*/
