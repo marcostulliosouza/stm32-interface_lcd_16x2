@@ -22,13 +22,13 @@ Este é um projeto simples que utiliza o microcontrolador STM32F103C8T6 para con
 
 ## Conexões
 
-RS - PB11
-RW - GND
-EN - PB10
-D4 - PB0
-D5 - PB1
-D6 - PC13
-D7 - PC14
+- RS - PB11
+- RW - GND
+- EN - PB10
+- D4 - PB0
+- D5 - PB1
+- D6 - PC13
+- D7 - PC14
 
 ## Funcionalidade
 
@@ -45,16 +45,19 @@ O LCD é controlado através de quatro pinos de dados e dois pinos de controle. 
 ## Passos para Configuração
 
 Abra o STM32CubeIDE e crie um novo projeto para o STM32F103C8T6.
+
 Configure os pinos GPIO no STM32CubeMX, mapeando os pinos de controle (RS, RW, EN) e os pinos de dados (D4, D5, D6, D7).
+
 Gere o código e implemente a lógica de controle do LCD.
+
 Compile o projeto e faça o upload para o microcontrolador.
 
 ## Funções Implementadas
 
-LCD_Init: Inicializa o LCD, configurando-o para o modo de 4 bits.
-LCD_EnablePulse: Envia o pulso para o pino EN, necessário para validar os dados no LCD.
-LCD_Send4Bits: Envia os 4 bits de dados para o LCD.
-LCD_SendCommand: Envia comandos para o LCD.
-LCD_SendData: Envia dados (caracteres) para o LCD.
-LCD_SetCursor: Posiciona o cursor no LCD.
-LCD_Print: Imprime uma string no LCD.
+- LCD_Init: Inicializa o LCD, configurando-o para o modo de 4 bits.
+- LCD_EnablePulse: Envia o pulso para o pino EN, necessário para validar os dados no LCD.
+- LCD_Send4Bits: Envia os 4 bits de dados para o LCD.
+- LCD_SendCommand: Envia comandos para o LCD.
+- LCD_SendData: Envia dados (caracteres) para o LCD.
+- LCD_SetCursor: Posiciona o cursor no LCD.
+- LCD_Print: Imprime uma string no LCD.
